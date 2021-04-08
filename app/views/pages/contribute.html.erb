@@ -11,7 +11,7 @@
       
 	  <h3>Guidance for ArcGIS Open Data Publishers</h3>
 	  <p></p>      
-	  <p>All known ArcGIS Open Data sites managed by Wisconsin agencies and organizations are indexed and made discoverable in GeoData@Wisconsin. We have automated procedures in place to periodically visit these sites, and add them to our <u><a href="/?f%5Bdct_isPartOf_sm%5D%5B%5D=Wisconsin+Open+Data+Sites&q=&search_field=all_fields">Wisconsin Open Data Sites Collection</a></u>. Below we offer some tips on maximizing the discoverabilty and usability of your data in GeoData@Wisconsin.</p> 
+	  <p>All known ArcGIS Open Data sites managed by Wisconsin agencies and organizations are indexed and made discoverable in GeoData@Wisconsin. We have automated procedures in place to periodically visit these sites, and add their content to our <u><a href="/?f%5Bdct_isPartOf_sm%5D%5B%5D=Wisconsin+Open+Data+Sites&q=&search_field=all_fields">Wisconsin Open Data Sites Collection</a></u>. Below we offer some tips on maximizing the discoverability and usability of your data in GeoData@Wisconsin.</p> 
  
 	  <h5>1. Use at least one tag from our recommended list when adding items to ArcGIS Online (AGOL)</h5>
 	  
@@ -26,11 +26,12 @@
 
 	  <h5>2. Consistency is important when tagging items in AGOL</h5>
 	
-	  <p>Browse through your own geoportal.  Do you find slight variations of the same intended tag? (e.g., "Parcel" vs "parcels" vs "Land Parcels," etc.) We find this is very common!  Librarians use  <a href="https://en.wikipedia.org/wiki/Controlled_vocabulary" target="_blank">controlled vocabularies</a> as a strategy to ensure consistency when tagging datasets. The aim of a controlled vocabulary is to ensure that users experience consistent and predictable search results. When this is achieved, users become more successful in the data discovery process and develop trust with the geoportal as a helpful resource. </p>
+	  <p>Browse through your own geoportal.  Do you find slight variations of the same intended tag? (e.g., "Parcel" vs "parcels" vs "Land Parcels," etc.) We find this is very common!  Librarians use  <a href="https://en.wikipedia.org/wiki/Controlled_vocabulary" target="_blank">controlled vocabularies</a> as a strategy to ensure consistency when tagging datasets. A controlled vocabulary can be as simple as a MS Word document that you keep handy when publishing new data. The aim of a controlled vocabulary is to ensure users experience consistent and predictable search results. When this is achieved, users become more successful in the data discovery process and develop trust with the geoportal as a helpful resource. </p>
 	
-	<h5>3. Check the bounding coordinates (envelope) of your data</h5>
-	
-	
+	  <h5>3. Check the bounding coordinates (envelope) of your data in AGOL</h5>
+	<p>Sometimes, for reasons we don't fully understand, items published in ArcGIS Online contain incorrect bounding coordinates that define the footprint of a dataset. In the following example, a dataset for the City of Madison has an envelope that extends into Michigan. The net effect: map searches in Milwaukee will incorrectly return results with a Madison dataset.  This is clearly unintended, and confuses users!</p>
+	<%= image_tag("envelope.png", alt: "Example of a bad bounding box", class: "img-thumbnail") %>
+	<p>&nbsp;</p>
 	  <h5>4. Creating minimal metadata is easy, and important for users</h5>
 	
 	  <p>Taking time to add <em>at least</em> the following metadata entries in ArcCatalog when describing a dataset or service will help users determine if the data is right for their purpose/use:</p>  
@@ -47,7 +48,7 @@
 </ul>	
 </p>
 	  
-
+<p>&nbsp;</p>
 	<h3>Recommended ArcGIS Online Tags</h3>
 	<p></p>
 	<div class="table-responsive-md">
