@@ -18,7 +18,7 @@
 	  <p>When uploading a new hosted data layer to AGOL, or connecting an AGOL item to a dataset on your in-house ArcGIS Server, we recommend you pick <em>at least</em> one tag from our list below. Use the tag exactly as you see it listed, paying close attention to the text case. You of course can add as many additional tags as needed to support your organization's mission.  The order of the tags does not matter.</p>
 		 <%= image_tag("dpitags.png", alt: "Example of tags for a data layer in AGOL", class: "float-right img-thumbnail ml-4") %>
 		 
-	  <p>Why? Using a consistent tagging scheme like this improves the ability of users to browse and find data both in GeoData@Wisconsin, and your own geoportal. [say a few more words???]</p>
+	  <p>Why? Using a consistent tagging scheme like this improves the ability of users to browse and find data both in GeoData@Wisconsin, and your own geoportal.</p>
 	
 
 	 
@@ -26,15 +26,27 @@
 
 	  <h5>2. Consistency is important when tagging items in AGOL</h5>
 	
-	  <p>Browse through your own geoportal.  Do you find slight variations of the same intended tag? (e.g., "Parcel" vs "parcels" vs "Land Parcels," etc.) We find this is very common!  Librarians use  <a href="https://en.wikipedia.org/wiki/Controlled_vocabulary" target="_blank">controlled vocabularies</a> as a strategy to ensure consistency when tagging datasets. The aim of a controlled vocabulary is to... [Get on a small soapbox here to educate??????] </p>
+	  <p>Browse through your own geoportal.  Do you find slight variations of the same intended tag? (e.g., "Parcel" vs "parcels" vs "Land Parcels," etc.) We find this is very common!  Librarians use  <a href="https://en.wikipedia.org/wiki/Controlled_vocabulary" target="_blank">controlled vocabularies</a> as a strategy to ensure consistency when tagging datasets. The aim of a controlled vocabulary is to ensure that users experience consistent and predictable search results. When this is achieved, users become more successful in the data discovery process and develop trust with the geoportal as a helpful resource. </p>
+	
+	<h5>3. Check the bounding coordinates (envelope) of your data</h5>
 	
 	
+	  <h5>4. Creating minimal metadata is easy, and important for users</h5>
 	
-	  <h5>3. When building geospatial metadata in ArcCatalog, always select an ISO Topic Category</h5>
-	
-	  <p>I wasn't sure what the aim of this one is, in relation to open data sites?  I do think some words of encouragement here on creating metadata would be totally appropriate. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+	  <p>Taking time to add <em>at least</em> the following metadata entries in ArcCatalog when describing a dataset or service will help users determine if the data is right for their purpose/use:</p>  
+<ul>
+<li>Title</li>
+<li>Tags/Keywords (using controlled vocabularies)</li>
+<li>ISO Topic Category - Assigning an ISO Topic Category can be achieved by simply checking the box next to the appropriate category in the “Topics and Keywords” section of the metadata editor.</li>
+<li>Summary</li>
+<li>Description</li>
+<li>Author/Creator</li>
+<li>Date(s) of Creation, Revision and/or Publication</li>
+<li>Bounding Geographic Extent</li>
+<li>Coordinate System/Projection</li>
+</ul>	
+</p>
 	  
-	  <p>[insert graphic example??????]</p>
 
 	<h3>Recommended ArcGIS Online Tags</h3>
 	<p></p>
@@ -84,7 +96,7 @@
 				<td>Health, health services, human ecology, and safety, for example disease and illness, factors affecting health, hygiene, substance abuse, mental and physical health, health services, health care providers, public health</td>
 			</tr>
 			<tr>
-				<td class="font-weight-bold">Imagery and Basemaps</td>
+				<td class="font-weight-bold">Imagery and Base Maps</td>
 				<td>Base maps, for example land/earth cover, topographic maps, imagery, unclassified images, annotations, digital ortho imagery</td>
 			</tr>
 			<tr>
