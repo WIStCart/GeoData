@@ -5,9 +5,9 @@ ruby '2.7.2'
 gem 'execjs', '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.5'
+gem 'rails', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.3.6"
+gem "sqlite3", "~> 1.4"
 gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '>= 3.12.6'
@@ -45,6 +45,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'listen'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   #gem 'listen', '>= 3.0.5', '< 3.2'
