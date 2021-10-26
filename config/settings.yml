@@ -41,6 +41,14 @@ FIELDS:
   :ISSUED: 'dct_issued_s'
   :SUPPLEMENTAL: 'uw_supplemental_s'
   :NOTICE: 'uw_notice_s'
+  :IDENTIFIER: 'dc_identifier_s'
+  :LANGUAGE: 'dc_language_s'
+  :LAYER_MODIFIED: 'layer_modified_dt'
+  :OVERLAP_FIELD: 'solr_bboxtype'
+  :SOURCE: 'dc_source_sm'
+  :SUPPRESSED: 'suppressed_b'
+  :TYPE: 'dc_type_s'
+  :UNIQUE_KEY: 'layer_slug_s'
 
 # Institution deployed at
 INSTITUTION: 'University of Wisconsin'
@@ -76,6 +84,7 @@ WEBSERVICES_SHOWN:
   - 'tiled_map_layer'
   - 'dynamic_map_layer'
   - 'image_map_layer'
+  - 'tms'
 
 # WMS Parameters
 WMS_PARAMS:
