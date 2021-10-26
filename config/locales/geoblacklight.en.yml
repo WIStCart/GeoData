@@ -29,6 +29,7 @@ en:
       data_type: 'Data Type'
       placename: 'Placename'
       subject: 'Subject'
+      version: 'GeoBlacklight version %{version}'
     tools:
       login_to_view: 'Login to View and Download'
       open_carto: 'Open in Carto'
@@ -65,10 +66,11 @@ en:
       services_close: 'Close'
     relations:
       ancestor: 'Source Datasets'
-      descendant: 'Derived Datasets (%{count})'
+      descendant: 'Derived Datasets'
       browse_all: "Browse all %{count} records..."
       title: 'Data Relations'
     metadata:
+      toggle_summary: 'Toggle summary'
       view_metadata: 'View Metadata'
       more_details: 'More details at'
       metadata_error: 'The metadata view for selected schema is not available'

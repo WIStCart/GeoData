@@ -12,6 +12,7 @@
 //= require geoblacklight/modules/metadata
 //= require geoblacklight/modules/relations
 //= require geoblacklight/modules/results
+//= require geoblacklight/modules/svg_tooltips
 //= require geoblacklight/modules/util
 //= require geoblacklight/downloaders
 //= require leaflet-iiif
