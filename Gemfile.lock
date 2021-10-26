@@ -216,8 +216,8 @@ GEM
       rsolr
       sanitize
       thor
-    geoblacklight (3.3.1)
-      blacklight (~> 7.0)
+    geoblacklight (3.4.0)
+      blacklight (~> 7.8)
       coderay
       config
       deprecation
@@ -471,7 +471,7 @@ DEPENDENCIES
   exception_notification (~> 4.4.0)
   execjs (= 2.7.0)
   foreman
-  geoblacklight (= 3.3.1)
+  geoblacklight (= 3.4.0)
   geoblacklight_sidecar_images (~> 0.7.0)
   haml
   inline_svg (~> 1.7.0)
