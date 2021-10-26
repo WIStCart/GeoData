@@ -12,7 +12,7 @@ class HomepageTest < ApplicationSystemTestCase
 
     within("div#main-container") do
       assert page.has_content?("Browse All")
-      assert page.has_content?("Statewide Layers")
+      assert page.has_content?("WI State Agency Layers")
       assert page.has_content?("Coastal Layers")
       assert page.has_content?("Aerial Imagery")
     end
