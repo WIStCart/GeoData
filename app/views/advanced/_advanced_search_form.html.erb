@@ -27,10 +27,8 @@
       </div>
     </div>
 
-    <div class="search-submit-buttons clearfix col-sm-7">
-
-           <%= link_to t('blacklight_advanced_search.form.start_over'), blacklight_advanced_search_engine.advanced_search_path, :class =>"btn btn-primary pull-right clear-form" %>
-           <%= render 'advanced_search_submit_btns' %>
+    <div class="search-submit-buttons clearfix col-sm-12">
+      <%= render 'advanced_search_submit_btns' %>
     </div>
   </div>
 <% end %>
