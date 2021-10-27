@@ -42,17 +42,8 @@
           <%= document["dc_publisher_sm"].join(', ') %>.
         <% end %>
 
-        <% if document["dct_provenance_s"] == "UW-Madison Robinson Map Library" %>
-            <%= url_for(:only_path => false).split("/citation")[0] %>
-        <% else %>
-            <% if document.references.url.present? %>
-                <%= document.references.url.endpoint %>
-            <% end %>
-        <% end %>
-    </p>
+        <%= url_for(:only_path => false).split("/citation")[0] %>
       </p>
     <% end %>
-
-
   <% end %>
 </div>
