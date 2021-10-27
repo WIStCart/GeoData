@@ -4,9 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.5'
+gem 'rails', '~> 6.1.0'
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.3.6"
+gem "sqlite3", "~> 1.4"
 gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '>= 3.12.6'
@@ -44,6 +44,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'listen'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   #gem 'listen', '>= 3.0.5', '< 3.2'
@@ -68,7 +69,7 @@ gem 'blacklight_advanced_search', git: 'https://github.com/projectblacklight/bla
 gem 'blacklight_range_limit', '~> 7.0.0'
 gem 'chosen-rails' #  jquery multiselect plugin for advanced search
 
-gem 'geoblacklight', '~> 2.3.0'
+gem 'geoblacklight', '3.4.0'
 gem 'rsolr', '>= 1.0', '< 3'
 gem 'bootstrap', '~> 4.0'
 gem 'popper_js'
@@ -83,7 +84,7 @@ gem 'awesome_print'
 gem 'inline_svg', '~> 1.7.0'
 
 # Sidecar images
-gem 'geoblacklight_sidecar_images', '~> 0.6.0'
+gem 'geoblacklight_sidecar_images', '~> 0.7.0'
 
 gem 'capistrano', '~>3.11.0'
 gem 'capistrano-bundler', '~>1.4.0'
@@ -94,8 +95,6 @@ gem 'chronic'
 gem 'exception_notification', '~> 4.4.0'
 
 # URI Analysis
-gem 'statesman', '~> 4.1.0'
-gem 'delayed_job_active_record', '~> 4.1.0'
+gem 'statesman', '~> 8.0.3'
 gem 'sidekiq', '~> 6.2.1'
-gem 'daemons', '~> 1.3.0'
 gem 'whenever', '~> 1.0.0'

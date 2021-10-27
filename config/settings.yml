@@ -38,8 +38,17 @@ FIELDS:
   :TEMPORAL: 'dct_temporal_sm'
   :TITLE: 'dc_title_s'
   :SOURCE: 'dc_source_sm'
+  :ISSUED: 'dct_issued_s'
   :SUPPLEMENTAL: 'uw_supplemental_s'
   :NOTICE: 'uw_notice_s'
+  :IDENTIFIER: 'dc_identifier_s'
+  :LANGUAGE: 'dc_language_s'
+  :LAYER_MODIFIED: 'layer_modified_dt'
+  :OVERLAP_FIELD: 'solr_bboxtype'
+  :SOURCE: 'dc_source_sm'
+  :SUPPRESSED: 'suppressed_b'
+  :TYPE: 'dc_type_s'
+  :UNIQUE_KEY: 'layer_slug_s'
 
 # Institution deployed at
 INSTITUTION: 'University of Wisconsin'
@@ -63,6 +72,9 @@ TIMEOUT_DOWNLOAD: 16
 # (For WMS inspection) timeout and open_timeout parameters for Faraday
 TIMEOUT_WMS: 4
 
+# Use the geometry type for the data relations icon
+USE_GEOM_FOR_RELATIONS_ICON: false
+
 # Web services shown in tool panel
 WEBSERVICES_SHOWN:
   - 'wms'
@@ -72,6 +84,7 @@ WEBSERVICES_SHOWN:
   - 'tiled_map_layer'
   - 'dynamic_map_layer'
   - 'image_map_layer'
+  - 'tms'
 
 # WMS Parameters
 WMS_PARAMS:
@@ -128,3 +141,9 @@ HELP_TEXT:
       - 'tiled_map_layer'
       - 'wms'
       - 'oembed'
+
+# Homepage Map Geometry
+# Leave null to default to entire world
+# Add a stringified GeoJSON object to scope initial render (example from UMass)
+HOMEPAGE_MAP_GEOM: null
+# HOMEPAGE_MAP_GEOM: '{"type":"Polygon","coordinates":[[[-73.58,42.93],[-73.58,41.20],[-69.90,41.20],[-69.90,42.93]]]}'
