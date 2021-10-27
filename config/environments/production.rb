@@ -114,15 +114,17 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # Exception email notification
-  Rails.application.config.middleware.use ExceptionNotification::Rack,
-   # Blacklight uses its own 404 extension we need to ignore separately
-   :ignore_exceptions => ['Blacklight::Exceptions::RecordNotFound'] + ExceptionNotifier.ignored_exceptions,
-   :email => {
-     :email_prefix => "[GeoData Error - #{`hostname`.strip}] ",
-     :sender_address => %{"GeoData@Wisconsin" <geodata@sco.wisc.edu>},
-     :exception_recipients => %w{ geodata@sco.wisc.edu }
-   }
+  # Removing / Exception email notification / GeoData Issue #188
+  # https://github.com/WIStCart/GeoDataV2/issues/188
+  # # Exception email notification
+  #   Rails.application.config.middleware.use ExceptionNotification::Rack,
+  #  # Blacklight uses its own 404 extension we need to ignore separately
+  #    :ignore_exceptions => ['Blacklight::Exceptions::RecordNotFound'] + ExceptionNotifier.ignored_exceptions,
+  #    :email => {
+  #      :email_prefix => "[GeoData Error - #{`hostname`.strip}] ",
+  #      :sender_address => %{"GeoData@Wisconsin" <geodata@sco.wisc.edu>},
+  #      :exception_recipients => %w{ geodata@sco.wisc.edu }
+  #    }
 
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
