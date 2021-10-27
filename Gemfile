@@ -5,7 +5,7 @@ ruby '2.7.2'
 gem 'execjs', '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.0'
+gem 'rails', '~> 6.1.0'
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 gem 'mysql2'
@@ -97,7 +97,5 @@ gem 'exception_notification', '~> 4.4.0'
 
 # URI Analysis
 gem 'statesman', '~> 8.0.3'
-gem 'delayed_job_active_record', '~> 4.1.0'
 gem 'sidekiq', '~> 6.2.1'
-gem 'daemons', '~> 1.3.0'
 gem 'whenever', '~> 1.0.0'
