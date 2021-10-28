@@ -86,6 +86,16 @@ GeoBlacklight.Viewer.Map = GeoBlacklight.Viewer.extend({
   },
 
   /**
+   * Add a GeoJSON overlay to map.
+   * @param {string} geojson GeoJSON string
+   */
+  addGeoJsonOverlay: function(geojson) {
+    var layer = L.geoJSON();
+    layer.addData(geojson);
+    this.overlay.addLayer(layer);
+  },
+
+  /**
   * Selects basemap if specified in data options, if not return mapquest
   */
   selectBasemap: function() {

@@ -22,7 +22,7 @@ module Geoblacklight
         if Settings.OVERLAP_RATIO_BOOST
           solr_params[:bf] ||= []
           solr_params[:overlap] =
-            "{!field uf=* defType=lucene f=solr_bboxtype score=overlapRatio}Intersects(#{envelope_bounds})"
+            "{!field uf=* defType=lucene f=#{Settings.FIELDS.OVERLAP_FIELD} score=overlapRatio}Intersects(#{envelope_bounds})"
           solr_params[:bf] << "$overlap^#{Settings.OVERLAP_RATIO_BOOST}"
         end
       end
@@ -61,10 +61,10 @@ module Geoblacklight
 
       # Do not suppress action_documents method calls for individual documents
       # ex. CatalogController#web_services (exportable views)
-      return if solr_params[:q]&.include?('{!lucene}layer_slug_s:')
+      return if solr_params[:q]&.include?("{!lucene}#{Settings.FIELDS.UNIQUE_KEY}:")
 
       solr_params[:fq] ||= []
-      solr_params[:fq] << '-suppressed_b: true'
+      solr_params[:fq] << "-#{Settings.FIELDS.SUPPRESSED}: true"
     end
   end
 end
