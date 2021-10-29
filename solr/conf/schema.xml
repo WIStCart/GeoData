@@ -47,11 +47,11 @@
     <!-- date range (_dr...) (for faster AND better range queries) -->
     <dynamicField name="*_dri" type="dateRange" stored="false" indexed="true" multiValued="false"/>
     <dynamicField name="*_drim" type="dateRange" stored="false" indexed="true" multiValued="true"/>
-    <dynamicField name="*_drs" type="dateRange" stored="true" indexed="false" multiValued="false"/>
-    <dynamicField name="*_drsm" type="dateRange" stored="true" indexed="false" multiValued="true"/>
+    <dynamicField name="*_drs" type="dateRange" stored="true" indexed="true" multiValued="false"/>
+    <dynamicField name="*_drsm" type="dateRange" stored="true" indexed="true" multiValued="true"/>
     <dynamicField name="*_drsi" type="dateRange" stored="true" indexed="true" multiValued="false"/>
     <dynamicField name="*_drsim" type="dateRange" stored="true" indexed="true" multiValued="true"/>
-    
+
     <!-- Spatial field types:
 
          Solr3:
@@ -93,7 +93,7 @@
 
     <!-- A DateRange based date field for truly faster date range queries. -->
     <fieldType name="dateRange" class="solr.DateRangeField"/>
-    
+
     <!--Binary data type. The data should be sent/retrieved in as Base64 encoded Strings -->
     <fieldtype name="binary" class="solr.BinaryField"/>
 
@@ -137,7 +137,6 @@
       <analyzer>
         <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_en.txt"/>
-        <filter class="solr.StandardFilterFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
       </analyzer>
@@ -147,7 +146,6 @@
     <fieldType class="solr.TextField" name="textSuggest" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.KeywordTokenizerFactory"/>
-        <filter class="solr.StandardFilterFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
       </analyzer>
