@@ -14,6 +14,11 @@
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "analytics" %>
+
+    <!-- GeoSearch -->
+    <link  href="https://unpkg.com/leaflet-geosearch@latest/assets/css/leaflet.css" rel="stylesheet" />
+    <script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
+
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
   </head>
