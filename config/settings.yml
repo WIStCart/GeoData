@@ -116,6 +116,27 @@ LEAFLET:
       SELECTED:
         <<: *default
         color: "#006bde"
+      VISITED:
+        <<: *default
+        color: "#FFA500"
+      TABLE_VIEW: true
+      TABLE_COLUMNS:
+        # array of column options
+        # field: OpenIndexMaps element
+        # label: Column / Value label
+        -
+          field: title
+          label: Title
+        -
+          field: websiteUrl
+          label: Website
+        -
+          field: downloadUrl
+          label: Download
+        -
+          field: label
+          label: Label
+      TABLE_COLUMNS_UNIQUE_IDENTIFIER: label
   VIEWERS:
     WMS:
       <<: *opacity_control
