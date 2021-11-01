@@ -53,6 +53,7 @@ class SolrDocument
       sc.version = self._source["_version_"]
     end
 
+    # Set version - if doc has changed we'll reimage, someday
     sidecar.version = self._source["_version_"]
     sidecar.save
 

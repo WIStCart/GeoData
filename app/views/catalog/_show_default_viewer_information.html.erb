@@ -1,0 +1,14 @@
+<div class='row'>
+  <div class='viewer-information col-sm-12'>
+  </div>
+
+  <table class='viewer-table-information col-sm-12 table mt-2' style='display:none;'>
+    <thead>
+      <%- Settings.LEAFLET.LAYERS.INDEX.TABLE_COLUMNS.each do |column| %>
+        <th><%= column.label %></th>
+      <% end %>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>

@@ -1,6 +1,8 @@
 en:
   geoblacklight:
     bbox_label: 'Bounding Box'
+    citation:
+      retrieved_from: 'Retrieved from %{document_url}'
     download:
       download: 'Download'
       download_link: 'Download %{download_format}'
@@ -27,6 +29,7 @@ en:
       data_type: 'Data Type'
       placename: 'Placename'
       subject: 'Subject'
+      version: 'GeoBlacklight version %{version}'
     tools:
       login_to_view: 'Login to View and Download'
       open_carto: 'Open in Carto'
@@ -40,6 +43,8 @@ en:
       jpg: 'JPG'
       esri_geodatabase: 'ESRI Geodatabase'
       sqlite_database: 'SQLite Database'
+    map:
+      label: 'Zoomable map'
     references:
       wms: 'Web Mapping Service (WMS)'
       wms_abv: 'WMS'
@@ -59,12 +64,14 @@ en:
       data_dictionary: 'Documentation'
       services: 'Web services'
       services_close: 'Close'
+      tms: 'Tile Map Service'
     relations:
       ancestor: 'Source Datasets'
-      descendant: 'Derived Datasets (%{count})'
+      descendant: 'Derived Datasets'
       browse_all: "Browse all %{count} records..."
       title: 'Data Relations'
     metadata:
+      toggle_summary: 'Toggle summary'
       view_metadata: 'View Metadata'
       more_details: 'More details at'
       metadata_error: 'The metadata view for selected schema is not available'
@@ -102,6 +109,48 @@ en:
         tiled_map_layer:
           title: ArcGIS Tiled Map Layer
           content: An ArcGIS Tiled Map Layer Service displays set of web-accessible tiles that reside on a server.
+        tms:
+          title: Tile Map Service
+          content: A Tile Map Service displays georeferenced map tiles as an image on a map.
         wms:
           title: Web Map Service (WMS)
           content: A Web Map Service displays a geospatial dataset as map images.
+  blacklight:
+    icon:
+      arrow-circle-down: Arrow within a circle, pointing down
+      baruch-cuny: Baruch College
+      berkeley: University of California, Berkeley
+      cd-rom: CD-Rom
+      chicago: The University of Chicago
+      columbia: Columbia University
+      cornell: Cornell University
+      dvd-rom: DVD-Rom
+      esri-globe: Esri Global
+      harvard: Harvard University
+      illinois: University of Illinois
+      indiana: Indiana University
+      iowa: University of Iowa
+      lewis-clark: Lewis & Clark
+      maryland: University of Maryland
+      massgis: MassGIS
+      michigan-state: Michigan State University
+      michigan: University of Michigan
+      minnesota: University of Minnesota
+      mit: Massachusetts Institute of Technology
+      multilinestring: Multi-line string
+      multipoint: Multi-point
+      multipolygon: Multi-polygon
+      nyu: New York University
+      ohio-state: The Ohio State University
+      penn-state: Penn State University
+      princeton: Princeton University
+      public: Public content
+      purdue: Purdue University
+      restricted: Restricted content
+      sms: SMS
+      stanford: Stanford University
+      texas: The University of Texas at Austin
+      tufts: Tufts University
+      ucla: University of California, Los Angeles
+      uva: University of Virginia
+      wisconsin: University of Wisconsin
