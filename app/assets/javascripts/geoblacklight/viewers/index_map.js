@@ -43,11 +43,12 @@ GeoBlacklight.Viewer.IndexMap = GeoBlacklight.Viewer.Map.extend({
             if (feature.properties.available !== null) {
               layer.on('click', function(e) {
                 var removed = false;
+                // color  = state
                 // green  = default
                 // blue   = current
                 // orange = visited
 
-                // if color is visited, remove from table
+                // on click, if color is visited, remove row from table
                 if (layer.options.color == options.LAYERS.INDEX.VISITED.color) {
                   // Reset color to default
                   layer.setStyle(options.LAYERS.INDEX.DEFAULT);
@@ -67,7 +68,6 @@ GeoBlacklight.Viewer.IndexMap = GeoBlacklight.Viewer.Map.extend({
                 if (options.LAYERS.INDEX.TABLE_VIEW && removed == false) {
                   // Display option: Append to Table
                   GeoBlacklight.Util.indexMapTableRowTemplate(feature.properties, function(html) {
-                    console.log(feature.properties['label']);
                     $('.viewer-table-information').show();
                     if ($('table.viewer-table-information td:contains("' + options.LAYERS.INDEX.TABLE_COLUMNS_UNIQUE_IDENTIFIER + '")').length > 0) {
                       // Already present, do not append
@@ -80,7 +80,7 @@ GeoBlacklight.Viewer.IndexMap = GeoBlacklight.Viewer.Map.extend({
                   // Do nothing
                 }
                   else {
-                  // Display option: Replace viewer
+                  // Default display option: Replace layer preview
                   GeoBlacklight.Util.indexMapTemplate(feature.properties, function(html) {
                     $('.viewer-information').html(html);
                   });
