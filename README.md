@@ -1,5 +1,5 @@
 # UW Geodata
-Using Blacklight v7, GBL v2.3, Solr v7.5, Ruby 2.7, Rails v5.2 / Release 2.3.8
+Using Blacklight v7.19.2, GBL v3.4, Solr v7.5, Ruby 2.7.2, Rails v6.1 / Release 3.4.0
 
 ### Setup for local development and deployment
 ```shell
