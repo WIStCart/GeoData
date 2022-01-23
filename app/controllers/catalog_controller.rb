@@ -116,7 +116,8 @@ class CatalogController < ApplicationController
 
     config.add_facet_field 'time_period', :label => 'Time Period', :query => {
       'Future' => { :label => 'Future', :fq => "solr_year_i:[#{Time.now.year + 1} TO 3000]"},
-      '2015-present' => { :label => '2015-present', :fq => "solr_year_i:[2015 TO #{Time.now.year}]"},
+      '2020-present' => { :label => '2020-present', :fq => "solr_year_i:[2020 TO #{Time.now.year}]"},
+      '2015-2019' => { :label => '2015-2019', :fq => "solr_year_i:[2015 TO 2019]" },
       '2010-2014' => { :label => '2010-2014', :fq => "solr_year_i:[2010 TO 2014]" },
       '2005-2009' => { :label => '2005-2009', :fq => "solr_year_i:[2005 TO 2009]" },
       '2000-2004' => { :label => '2000-2004', :fq => "solr_year_i:[2000 TO 2004]" },
