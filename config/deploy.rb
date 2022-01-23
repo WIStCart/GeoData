@@ -4,7 +4,7 @@
 lock "~> 3.11.0"
 
 set :application, 'geodata'
-set :repo_url, 'git@github.com:WIStCart/geodatav2.git'
+set :repo_url, 'git@github.com:WIStCart/geodata.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
