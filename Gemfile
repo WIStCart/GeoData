@@ -96,5 +96,5 @@ gem 'exception_notification', '~> 4.4.0'
 
 # URI Analysis
 gem 'statesman', '~> 8.0.3'
-gem 'sidekiq', '~> 6.2.1'
+gem 'sidekiq', '~> 6.4.0'
 gem 'whenever', '~> 1.0.0'
