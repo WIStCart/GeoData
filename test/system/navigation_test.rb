@@ -46,7 +46,7 @@ class NavigationTest < ApplicationSystemTestCase
       assert page.has_link?("WisconsinView")
 
       # Contact Us
-      assert page.has_content?("geodata@sco.wisc.edu")
+      assert page.has_content?("help@sco.wisc.edu")
       assert page.has_content?("608-262-3065")
     end
   end
