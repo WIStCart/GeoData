@@ -2,7 +2,6 @@ namespace :geodata do
   desc 'Purge URIs and State Transition History'
   task uri_purge: :environment do
     # Delete all Background Jobs, Transitions, and Uris
-    Rake::Task['jobs:clear'].invoke
     UriTransition.destroy_all
     SolrDocumentUri.destroy_all
   end
