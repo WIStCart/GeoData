@@ -6,7 +6,9 @@ ruby '2.7.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.6'
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# 1.4.3 has an apparent bug that caused the compiler to fail.  I was updating the same day
+# SQLite 1.4.3 was released!
+gem "sqlite3", "1.4.2"
 gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '>= 3.12.6'
