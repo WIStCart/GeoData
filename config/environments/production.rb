@@ -77,13 +77,10 @@ Rails.application.configure do
   config.action_mailer.default_options = {from: 'geodata@sco.wisc.edu'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address:              'smtp.office365.com',
-      port:                 587,
-      domain:               'wisc.edu',
-      user_name:            'geodata_sco@wisc.edu',
-      password:             Rails.application.secrets.smtp_password,
-      authentication:       'login',
-      enable_starttls_auto: true }
+      address:              'smtp.wiscmail.wisc.edu',
+      port:                 25,
+      domain:               'wisc.edu'
+      }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
