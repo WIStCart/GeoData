@@ -1,17 +1,16 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.4'
+ruby '2.7.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.6'
+gem 'rails', '~> 6.1.0'
 # Use sqlite3 as the database for Active Record
-# 1.4.3 has an apparent bug that caused the compiler to fail.  I was updating the same day
-# SQLite 1.4.3 was released!
-gem "sqlite3", "1.4.2"
-gem 'mysql2'
+gem "sqlite3", "1.6.1"
+gem "mysql2", "0.5.5"
 # Use Puma as the app server
-gem 'puma', '>= 3.12.6'
+#gem 'puma', '>= 3.12.6'
+gem 'puma', '~> 6.1', '>= 6.1.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -67,10 +66,15 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'blacklight', '~> 7.0'
-gem 'blacklight_advanced_search', git: 'https://github.com/projectblacklight/blacklight_advanced_search.git', :branch => 'master'
+#gem 'blacklight_advanced_search', git: 'https://github.com/projectblacklight/blacklight_advanced_search.git', :branch => 'main'
+# BL Advanced Search / Pinned to EWL bug-fix
+# See: https://github.com/projectblacklight/blacklight_advanced_search/issues/127
+gem "blacklight_advanced_search", git: 'https://github.com/ewlarson/blacklight_advanced_search.git', branch: "bl7-fix-gentle-hands"
+
 gem 'blacklight_range_limit', '~> 7.0.0'
 gem 'chosen-rails' #  jquery multiselect plugin for advanced search
 
+# 3.7 is most current 3.x
 gem 'geoblacklight', '3.4.0'
 gem 'rsolr', '>= 1.0', '< 3'
 gem 'bootstrap', '~> 4.0'
