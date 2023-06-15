@@ -2,3 +2,8 @@
 .search-control {
     border-radius: .7em;
 }
+
+// fix transparent background of search input
+.form-control {
+	background-color: #FFF !important;
+}
