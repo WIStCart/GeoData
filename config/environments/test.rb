@@ -9,7 +9,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Google Analytics - Test and Dev
-  config.google_analytics = 'UA-129066-16'
+  config.google_analytics = 'G-YEWJPNGD82'
 
   config.cache_classes = true
 

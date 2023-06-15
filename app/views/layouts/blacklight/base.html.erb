@@ -12,18 +12,18 @@
     <%= opensearch_description_tag application_name, opensearch_catalog_url(format: 'xml') %>
     <%= favicon_link_tag %>
     <%= stylesheet_link_tag "application", media: "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag "analytics" %>
-
+    <%= javascript_include_tag "application" %>    
     <!-- GeoSearch -->
     <script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
 
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
+	<%= render partial: 'shared/analytics' %>
+	
   </head>
   <body class="<%= render_body_class %>">
   <%= render partial: 'shared/header_navbar' %>
-
+  
   <div id="main-container" class="<%= container_classes %>" data-analytics-id="<%= Rails.configuration.google_analytics %>">
     <%= content_for(:container_header) %>
 

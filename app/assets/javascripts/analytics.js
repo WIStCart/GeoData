@@ -1,103 +1,37 @@
-// Inspired by and modified from http://railsapps.github.io/rails-google-analytics.html
+// Code below is a modification of an approach originally used by the BTAA Geoportal
+// This approach is not used at this time... need feedback from Eric L.
 
  GoogleAnalytics = (function() {
   function GoogleAnalytics() {}
 
    GoogleAnalytics.load = function() {
-    var firstScript, ga;
-    window._gaq = [];
+	var firstScript, ga;
+    // Grab tracking id from Ruby variable via function
     GoogleAnalytics.analyticsId = GoogleAnalytics.getAnalyticsId();
-    window._gaq.push(['_setAccount', GoogleAnalytics.analyticsId]);
-    ga = document.createElement('script');
-    ga.type = 'text/javascript';
+    console.log(GoogleAnalytics.analyticsId);
+	// insert GA javascript into document
+	ga = document.createElement('script');  
     ga.async = true;
-    ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.src = ('https://www.googletagmanager.com/gtag/js?id=' + GoogleAnalytics.analyticsId);
+	// Make this the first js include in the list
     firstScript = document.getElementsByTagName('script')[0];
-    firstScript.parentNode.insertBefore(ga, firstScript);
+    firstScript.parentNode.insertBefore(ga, firstScript);	
+	// The following code comes from Google Analytics "install your tag" instructions.  Only difference is insertion of GoogleAnalytics.analyticsId
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', GoogleAnalytics.analyticsId,{'debug_mode':true });
   };
 
-   GoogleAnalytics.trackPageview = function(url) {
-    if (!GoogleAnalytics.isLocalRequest()) {
-      if (url) {
-        window._gaq.push(['_trackPageview', url]);
-      } else {
-        window._gaq.push(['_trackPageview']);
-      }
-      return window._gaq.push(['_trackPageLoadTime']);
-    }
-  };
-
-   GoogleAnalytics.isLocalRequest = function() {
-    return GoogleAnalytics.documentDomainIncludes('local');
-  };
-
-   GoogleAnalytics.documentDomainIncludes = function(str) {
-    return document.domain.indexOf(str) !== -1;
-  };
-
-   GoogleAnalytics.getAnalyticsId = function() {
+  GoogleAnalytics.getAnalyticsId = function() {
     return $('[data-analytics-id]').data('analytics-id');
   };
 
    return GoogleAnalytics;
 
  })();
-
- Blacklight.onLoad(function() {
-  GoogleAnalytics.load();
-  if (GoogleAnalytics.analyticsId) {
-    GoogleAnalytics.trackPageview();
-  }
-
-   // Log spatial search events
-
-   // Map Moved
-  History.Adapter.bind(window, 'statechange', function(e) {
-    var state = History.getState();
-    window._gaq.push(['_trackEvent', 'Spatial Search', 'Map Moved', state.url]);
+ 
+  Blacklight.onLoad(function() {
+  // inserting here results in at least two includes of google tag js
+  //GoogleAnalytics.load();
   });
-
-   // Initiate search in an area
-  $('.leaflet-control.search-control a.btn-primary').on('click', function(e) {
-    window._gaq.push(['_trackEvent', 'Spatial Search', 'Search Here', e.currentTarget.baseURI]);
-  });
-
-   // Log download clicks
-  $(document).on('click', '[data-download="trigger"]', function(e) {
-    var data = $(e.target).data();
-    window._gaq.push(['_trackEvent', 'Download', data.downloadId, data.downloadType]);
-  });
-
-   // Log failed download
-  $(document).on('DOMNodeInserted', function(e) {
-    var data = $('[data-download="error"]').data();
-    if (data) {
-      window._gaq.push(['_trackEvent', 'Failed Download', data.downloadId, data.downloadType]);
-    }
-  });
-
-   // Log Open in CartoDB Clicks
-  $(document).on('click', 'li.exports a:contains("Open in CartoDB")', function(e) {
-    window._gaq.push(['_trackEvent', 'Open in CartoDB', window.location.pathname.replace('/catalog/', '')]);
-  });
-
-  // Log all show page tool clicks
-  $(document).on('click', 'div.show-tools li a', function() {
-    var data = $(this);
-    window._gaq.push(['_trackEvent', $.trim(data[0].innerText), window.location.href.split("/").pop()]);
-  });
-
-  // Log all facet expand/collapse clicks
-  $('#facets h3').on('click', function(){
-    var label = $(this).text();
-    var heading_values = ['Facets', 'collapse_expand', label];
-    _gaq.push(['_trackEvent'].concat(heading_values));
-  });
-
-  // Log all facet more link clicks
-  $('#facets li.more_facets a').on('click', function(){
-    var label = $(this).find("span").text();
-    var heading_values = ['Facets', 'more_link', label];
-    _gaq.push(['_trackEvent'].concat(heading_values));
-  });
-});
