@@ -36,4 +36,3 @@ yarn-debug.log*
 .yarn-integrity
 
 public/*.csv
-Gemfile.lock
