@@ -4,7 +4,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Google Analytics - Test and Dev
-  config.google_analytics = 'UA-129066-16'
+  config.google_analytics = 'G-YEWJPNGD82'
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development

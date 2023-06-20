@@ -41,7 +41,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'dotenv-rails'
-  gem 'solr_wrapper', '~> 3.0'
+  gem 'solr_wrapper', '~> 4.0'
 end
 
 group :development do
@@ -102,5 +102,5 @@ gem 'exception_notification', '~> 4.4.0'
 
 # URI Analysis
 gem 'statesman', '~> 8.0.3'
-gem 'sidekiq', '~> 6.4.0'
+gem 'sidekiq', '~> 7.0.8'
 gem 'whenever', '~> 1.0.0'
