@@ -77,14 +77,17 @@ USE_GEOM_FOR_RELATIONS_ICON: false
 
 # Web services shown in tool panel
 WEBSERVICES_SHOWN:
-  - 'wms'
+  - 'tms'
   - 'wfs'
+  - 'xyz'
+  - 'wmts'
+  - 'tilejson'
+  - 'wms'
   - 'iiif'
   - 'feature_layer'
   - 'tiled_map_layer'
   - 'dynamic_map_layer'
   - 'image_map_layer'
-  - 'tms'
 
 # WMS Parameters
 WMS_PARAMS:

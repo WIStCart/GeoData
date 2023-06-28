@@ -243,7 +243,7 @@ GEM
       rsolr
       sanitize
       thor
-    geoblacklight (3.5.0)
+    geoblacklight (3.6.0)
       blacklight (~> 7.8)
       coderay
       config
@@ -544,7 +544,7 @@ DEPENDENCIES
   dotenv-rails
   exception_notification (~> 4.4.0)
   foreman
-  geoblacklight (= 3.5.0)
+  geoblacklight (= 3.6.0)
   geoblacklight_sidecar_images (~> 0.7.0)
   haml
   inline_svg (~> 1.7.0)
