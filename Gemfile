@@ -74,8 +74,7 @@ gem "blacklight_advanced_search", git: 'https://github.com/ewlarson/blacklight_a
 gem 'blacklight_range_limit', '~> 7.0.0'
 gem 'chosen-rails' #  jquery multiselect plugin for advanced search
 
-# 3.7 is most current 3.x
-gem 'geoblacklight', '3.4.0'
+gem 'geoblacklight', '3.5.0'
 gem 'rsolr', '>= 1.0', '< 3'
 gem 'bootstrap', '~> 4.0'
 gem 'popper_js'
