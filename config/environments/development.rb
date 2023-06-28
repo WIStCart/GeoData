@@ -94,4 +94,9 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  
+  
+  # uncomment the follow to stop everything and show unpermitted parameter errors
+  # This seems common after upgrading to latest version of Ruby.  Uncertain if this is a GeoData or GeoBlacklight problem to resolve
+  #config.action_controller.action_on_unpermitted_parameters = :raise
 end

@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.7'
+ruby '3.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.0'
+gem 'rails', '~> 7.0', '>= 7.0.5.1'
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "1.6.1"
 gem "mysql2", "0.5.5"
@@ -28,14 +28,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '>= 1.9.3', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -45,7 +42,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen'
+  gem 'listen', '~> 3.0'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   #gem 'listen', '>= 3.0.5', '< 3.2'
@@ -65,8 +62,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'blacklight', '~> 7.0'
+gem 'blacklight', '~> 7.33.1'
 #gem 'blacklight_advanced_search', git: 'https://github.com/projectblacklight/blacklight_advanced_search.git', :branch => 'main'
+
 # BL Advanced Search / Pinned to EWL bug-fix
 # See: https://github.com/projectblacklight/blacklight_advanced_search/issues/127
 gem "blacklight_advanced_search", git: 'https://github.com/ewlarson/blacklight_advanced_search.git', branch: "bl7-fix-gentle-hands"
@@ -74,7 +72,7 @@ gem "blacklight_advanced_search", git: 'https://github.com/ewlarson/blacklight_a
 gem 'blacklight_range_limit', '~> 7.0.0'
 gem 'chosen-rails' #  jquery multiselect plugin for advanced search
 
-gem 'geoblacklight', '3.6.0'
+gem 'geoblacklight', '3.7.0'
 gem 'rsolr', '>= 1.0', '< 3'
 gem 'bootstrap', '~> 4.0'
 gem 'popper_js'
@@ -88,8 +86,10 @@ gem 'haml'
 gem 'awesome_print'
 gem 'inline_svg', '~> 1.7.0'
 
-# Sidecar images
-gem 'geoblacklight_sidecar_images', '~> 0.7.0'
+# Image migration
+gem "geoblacklight_sidecar_images", "~> 0.9.1", "< 1.0"
+gem 'carrierwave', '~> 1.2'
+gem 'mini_magick', '~> 4.9.4'
 
 gem 'capistrano', '~>3.11.0'
 gem 'capistrano-bundler', '~>1.4.0'
@@ -97,7 +97,7 @@ gem 'capistrano-rails', '~>1.4.0'
 gem 'capistrano-passenger', '~>0.2.0'
 
 gem 'chronic'
-gem 'exception_notification', '~> 4.4.0'
+gem 'exception_notification', '~> 4.5.0'
 
 # URI Analysis
 gem 'statesman', '~> 8.0.3'
