@@ -2,7 +2,6 @@
 
 require "addressable/uri"
 require "net/http"
-require "net/ftp"
 
 # Abstract base class for representing the results of checking one URI.
 class Result
