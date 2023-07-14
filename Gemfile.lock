@@ -357,6 +357,9 @@ GEM
     msgpack (1.7.1)
     multipart-post (2.3.0)
     mysql2 (0.5.5)
+    net-ftp (0.2.0)
+      net-protocol
+      time
     net-http-persistent (4.0.2)
       connection_pool (~> 2.2)
     net-imap (0.3.6)
@@ -492,6 +495,8 @@ GEM
       rails (>= 3.1)
     thor (1.2.2)
     tilt (2.2.0)
+    time (0.2.2)
+      date
     timeout (0.4.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
@@ -567,6 +572,7 @@ DEPENDENCIES
   listen (~> 3.0)
   mini_magick (~> 4.9.4)
   mysql2 (= 0.5.5)
+  net-ftp
   popper_js
   puma (~> 6.1, >= 6.1.1)
   rails (~> 7.0, >= 7.0.5.1)
