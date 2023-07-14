@@ -210,35 +210,13 @@ GEM
       actionmailer (>= 5.2, < 8)
       activesupport (>= 5.2, < 8)
     execjs (2.8.1)
-    faraday (1.9.0)
-      faraday-em_http (~> 1.0)
-      faraday-em_synchrony (~> 1.0)
-      faraday-excon (~> 1.1)
-      faraday-httpclient (< 3)
-      faraday-multipart (~> 1.0)
-      faraday-net_http (< 3)
-      faraday-net_http_persistent (< 3)
-      faraday-patron (< 3)
-      faraday-rack (~> 1.0)
-      faraday-retry (~> 1.0)
+    faraday (2.7.10)
+      faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
-    faraday-em_http (1.0.0)
-    faraday-em_synchrony (1.0.0)
-    faraday-excon (1.1.0)
-    faraday-httpclient (2.0.1)
-      httpclient (>= 2.2)
-    faraday-multipart (1.0.4)
-      multipart-post (~> 2)
-    faraday-net_http (2.1.0)
-    faraday-net_http_persistent (2.0.2)
-      faraday-net_http (< 3)
+    faraday-net_http (3.0.2)
+    faraday-net_http_persistent (2.1.0)
+      faraday (~> 2.5)
       net-http-persistent (~> 4.0)
-    faraday-patron (2.0.1)
-      patron (>= 0.4.2)
-    faraday-rack (1.0.0)
-    faraday-retry (1.0.3)
-    faraday_middleware (1.0.0)
-      faraday (~> 1.0)
     ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -253,14 +231,13 @@ GEM
       rsolr
       sanitize
       thor
-    geoblacklight (3.7.0)
+    geoblacklight (3.8.0)
       blacklight (~> 7.8)
       coderay
       config
       deprecation
-      faraday (~> 1.0)
-      faraday_middleware (~> 1.0.0.rc1)
-      geo_combine (~> 0.4)
+      faraday (>= 1.0)
+      geo_combine (~> 0.8)
       handlebars_assets
       mime-types
       rails (>= 5.2.4, < 7.1)
@@ -295,7 +272,6 @@ GEM
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    httpclient (2.8.3)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -355,7 +331,6 @@ GEM
     minitar (0.9)
     minitest (5.18.1)
     msgpack (1.7.1)
-    multipart-post (2.3.0)
     mysql2 (0.5.5)
     net-ftp (0.2.0)
       net-protocol
@@ -380,7 +355,6 @@ GEM
     orm_adapter (0.5.0)
     ostruct (0.5.5)
     parslet (2.0.0)
-    patron (0.13.3)
     popper_js (1.16.1)
     public_suffix (5.0.3)
     puma (6.3.0)
@@ -563,7 +537,7 @@ DEPENDENCIES
   dotenv-rails
   exception_notification (~> 4.5.0)
   foreman
-  geoblacklight (= 3.7.0)
+  geoblacklight (= 3.8.0)
   geoblacklight_sidecar_images (~> 0.9.1, < 1.0)
   haml
   inline_svg (~> 1.7.0)
