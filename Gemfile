@@ -9,7 +9,6 @@ gem 'rails', '~> 7.0', '>= 7.0.5.1'
 gem "sqlite3", "1.6.1"
 gem "mysql2", "0.5.5"
 # Use Puma as the app server
-#gem 'puma', '>= 3.12.6'
 gem 'puma', '~> 6.1', '>= 6.1.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -27,6 +26,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+# Now required for uri checker as of Ruby 3.x
+gem 'net-ftp'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -91,10 +93,10 @@ gem "geoblacklight_sidecar_images", "~> 0.9.1", "< 1.0"
 gem 'carrierwave', '~> 1.2'
 gem 'mini_magick', '~> 4.9.4'
 
-gem 'capistrano', '~>3.11.0'
-gem 'capistrano-bundler', '~>1.4.0'
-gem 'capistrano-rails', '~>1.4.0'
-gem 'capistrano-passenger', '~>0.2.0'
+gem 'capistrano', '~>3.17'
+gem 'capistrano-bundler', '~>2.1'
+gem 'capistrano-rails', '~>1.6'
+gem 'capistrano-passenger', '~>0.2'
 
 gem 'chronic'
 gem 'exception_notification', '~> 4.5.0'
