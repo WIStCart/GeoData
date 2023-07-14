@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Now required for uri checker as of Ruby 3.x
+gem 'net-ftp'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
