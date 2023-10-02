@@ -102,6 +102,7 @@ gem 'chronic'
 gem 'exception_notification', '~> 4.5.0'
 
 # URI Analysis
-gem 'statesman', '~> 8.0.3'
-gem 'sidekiq', '~> 7.1.3'
-gem 'whenever', '~> 1.0.0'
+gem 'actionmailer', '~> 7.0', '>= 7.0.7.2'
+gem 'statesman', '~> 10.2', '>= 10.2.3'
+gem 'sidekiq', '~> 7.1', '>= 7.1.5'
+gem 'whenever', '~> 1.0'
