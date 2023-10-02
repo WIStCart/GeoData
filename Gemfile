@@ -9,7 +9,7 @@ gem 'rails', '~> 7.0', '>= 7.0.5.1'
 gem "sqlite3", "1.6.1"
 gem "mysql2", "0.5.5"
 # Use Puma as the app server
-gem 'puma', '~> 6.1', '>= 6.1.1'
+gem 'puma', '~> 6.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -102,6 +102,7 @@ gem 'chronic'
 gem 'exception_notification', '~> 4.5.0'
 
 # URI Analysis
-gem 'statesman', '~> 8.0.3'
-gem 'sidekiq', '~> 7.0.8'
-gem 'whenever', '~> 1.0.0'
+gem 'actionmailer', '~> 7.0', '>= 7.0.7.2'
+gem 'statesman', '~> 10.2', '>= 10.2.3'
+gem 'sidekiq', '~> 7.1', '>= 7.1.5'
+gem 'whenever', '~> 1.0'
