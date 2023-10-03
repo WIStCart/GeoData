@@ -79,7 +79,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       address:              'smtp.wiscmail.wisc.edu',
       port:                 25,
-      domain:               'wisc.edu'
+      domain:               'wisc.edu',
+	  open_timeout:			30,
+	  read_timeout:			30
       }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
