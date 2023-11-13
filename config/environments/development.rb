@@ -47,7 +47,10 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.wiscmail.wisc.edu',
     port:                 25,
-    domain:               'wisc.edu' }
+    domain:               'wisc.edu',
+	open_timeout:			30,
+	read_timeout:			30
+	}
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
