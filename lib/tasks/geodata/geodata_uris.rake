@@ -87,7 +87,7 @@ namespace :geodata do
         #"Doc Data Type",
         "Doc Title",
         "Doc Collection",
-        "Doc Institution",
+        "Doc Institution"
         #"Error"
       ]
 
@@ -107,7 +107,7 @@ namespace :geodata do
 				#doc._source['layer_geom_type_s'],
 				doc._source['dc_title_s'],
 				doc._source['dct_isPartOf_sm'].to_s,
-				doc._source['dct_provenance_s'],
+				doc._source['dct_provenance_s']
 				#uri.state_machine.last_transition.metadata['exception']
 			  ]
 			end
