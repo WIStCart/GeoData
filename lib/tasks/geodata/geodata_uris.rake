@@ -80,15 +80,15 @@ namespace :geodata do
     CSV.open(file, 'w') do |writer|
       header = [
         "State",
-        #"URI ID",
+        "URI ID",
         "URI Document UUID",
         "URI Key",
         "URI Value",
-        #"Doc Data Type",
+        "Doc Data Type",
         "Doc Title",
         "Doc Collection",
-        "Doc Institution"
-        #"Error"
+        "Doc Institution",
+        "Error"
       ]
 
       writer << header
@@ -97,20 +97,18 @@ namespace :geodata do
         cat = Blacklight::SearchService.new(config: CatalogController.blacklight_config)
         begin
           resp, doc = cat.fetch(uri.document_id)
-			if uri.state_machine.current_state == 'failed'			
-			  writer << [
-				uri.state_machine.current_state,
-				#uri.id,
-				uri.document_id,
-				uri.uri_key,
-				uri.uri_value,
-				#doc._source['layer_geom_type_s'],
-				doc._source['dc_title_s'],
-				doc._source['dct_isPartOf_sm'].to_s,
-				doc._source['dct_provenance_s']
-				#uri.state_machine.last_transition.metadata['exception']
-			  ]
-			end
+          writer << [
+            uri.state_machine.current_state,
+            uri.id,
+            uri.document_id,
+            uri.uri_key,
+            uri.uri_value,
+            doc._source['layer_geom_type_s'],
+            doc._source['dc_title_s'],
+            doc._source['dct_isPartOf_sm'].to_s,
+            doc._source['dct_provenance_s'],
+            uri.state_machine.last_transition.metadata['exception']
+          ]
         rescue Exception => e
           puts "#{e.inspect}"
           puts "exception / #{uri.document_id}"
