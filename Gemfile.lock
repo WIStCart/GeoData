@@ -351,7 +351,7 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     net-ssh (7.2.0)
-    nio4r (2.5.9)
+    nio4r (2.7.0)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -359,7 +359,7 @@ GEM
     parslet (2.0.0)
     popper_js (1.16.1)
     public_suffix (5.0.3)
-    puma (6.4.0)
+    puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.8)
@@ -551,7 +551,7 @@ DEPENDENCIES
   mysql2 (= 0.5.5)
   net-ftp
   popper_js
-  puma (~> 6.3)
+  puma (~> 6.4)
   rails (~> 7.0, >= 7.0.5.1)
   rsolr (>= 1.0, < 3)
   sass-rails (~> 5.0)
