@@ -4,12 +4,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.0', '>= 7.0.5.1'
+gem 'rails', '~> 7.0'
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "1.6.1"
 gem "mysql2", "0.5.5"
 # Use Puma as the app server
-gem 'puma', '~> 6.3'
+gem 'puma', '~> 6.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -90,7 +90,7 @@ gem 'inline_svg', '~> 1.7.0'
 
 # Image migration
 gem "geoblacklight_sidecar_images", "~> 0.9.1", "< 1.0"
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 2.2'
 gem 'mini_magick', '~> 4.9.4'
 
 gem 'capistrano', '~>3.17'
