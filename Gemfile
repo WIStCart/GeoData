@@ -90,7 +90,7 @@ gem 'inline_svg', '~> 1.7.0'
 
 # Image migration
 gem "geoblacklight_sidecar_images", "~> 0.9.1", "< 1.0"
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 2.2'
 gem 'mini_magick', '~> 4.9.4'
 
 gem 'capistrano', '~>3.17'
