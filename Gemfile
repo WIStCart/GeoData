@@ -106,3 +106,7 @@ gem 'actionmailer', '~> 7.0', '>= 7.0.7.2'
 gem 'statesman', '~> 10.2', '>= 10.2.3'
 gem 'sidekiq', '~> 7.1', '>= 7.1.5'
 gem 'whenever', '~> 1.0'
+
+# Misc hacks
+gem 'debug','>= 1.9.2'
+gem 'rbs','>= 3.5.1'
