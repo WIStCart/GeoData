@@ -42,6 +42,9 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "storage"
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
+# /tmp does not allow execution on some systems, including UW CCI
+set :tmp_dir, '/opt/tmp'
+
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
 
