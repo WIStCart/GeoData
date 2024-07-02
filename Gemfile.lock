@@ -345,6 +345,9 @@ GEM
     orm_adapter (0.5.0)
     ostruct (0.6.0)
     parslet (2.0.0)
+    passenger (6.0.22)
+      rack
+      rake (>= 0.8.1)
     popper_js (1.16.1)
     process_executer (1.1.0)
     psych (5.1.2)
@@ -527,7 +530,7 @@ DEPENDENCIES
   bootstrap (~> 4.0)
   byebug
   capistrano (~> 3.19.1)
-  capistrano-bundler (~> 2.1)
+  capistrano-bundler (~> 2.1.0)
   capistrano-passenger (~> 0.2.1)
   capistrano-rails (~> 1.6.3)
   capybara (>= 2.15)
@@ -552,6 +555,7 @@ DEPENDENCIES
   mini_magick (~> 4.9.4)
   mysql2 (= 0.5.6)
   net-ftp
+  passenger (>= 6.0.22)
   popper_js
   puma (~> 6.4)
   rails (~> 7.0)
