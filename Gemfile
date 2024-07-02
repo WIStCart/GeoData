@@ -93,10 +93,10 @@ gem "geoblacklight_sidecar_images", "~> 0.9.1", "< 1.0"
 gem 'carrierwave', '~> 2.2'
 gem 'mini_magick', '~> 4.9.4'
 
-gem 'capistrano', '~>3.17'
+gem 'capistrano', '~>3.19.1'
 gem 'capistrano-bundler', '~>2.1'
-gem 'capistrano-rails', '~>1.6'
-gem 'capistrano-passenger', '~>0.2'
+gem 'capistrano-rails', '~>1.6.3'
+gem 'capistrano-passenger', '~>0.2.1'
 
 gem 'chronic'
 gem 'exception_notification', '~> 4.5.0'
